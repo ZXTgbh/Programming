@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <iomanip>
 #include <string>
 
@@ -58,9 +58,13 @@ int main()
         int chs3;
         cin >> chs3;
 
+        system("cls");
+
         cout << "[+] Введите длинну стороны квадрата:";
         int size2;
         cin >> size2;
+
+        system("cls");
 
         cout << "[+] Введите символ из которого будет состоять квадрат";
         char symbol2;
@@ -106,9 +110,13 @@ int main()
         int chs4;
         cin >> chs4;
 
+        system("cls");
+
         cout << "[+] Введите длинну стороны треугольника:";
         int size3;
         cin >> size3;
+
+        system("cls");
 
         cout << "[+] Введите символ из которого будет состоять треугольник";
         char symbol3;
@@ -118,7 +126,20 @@ int main()
 
         if (chs4 == 1)
         {
-            //Доделать
+            for (int i = 1; i <= size3; i++) {
+                for (int j = 1; j <= size3 - i; j++) {
+                    cout << " ";
+                }
+                for (int j = 1; j <= 2 * i - 1; j++) {
+                    if (j == 1 || j == 2 * i - 1 || i == size3) {
+                        cout << symbol3;
+                    }
+                    else {
+                        cout << " ";
+                    }
+                }
+                cout << endl;
+            }
         }
         else
         {
